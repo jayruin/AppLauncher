@@ -1,0 +1,19 @@
+﻿<Window x:Class="AppLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppLauncher"
+        mc:Ignorable="d"
+        Title="App Launcher" Height="200" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ComboBox Grid.Row="0" Name="comboBoxApps" ItemsSource="{Binding AppNamesCollection}" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+        <Button Grid.Row="1" Name="buttonLaunch" Click="buttonLaunch_Click">Launch</Button>
+    </Grid>
+</Window>
